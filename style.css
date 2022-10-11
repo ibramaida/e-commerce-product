@@ -373,7 +373,7 @@ select {
 
 /* ############################################################################# */
 
-header {
+.main-header {
   padding: 1.5rem 1rem;
   display: flex;
   align-items: center;
@@ -392,6 +392,25 @@ header {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.cart {
+  display: block;
+  position: relative;
+}
+
+.cart-items-count {
+  display: inline-block;
+  width: 1rem;
+  background-color: var(--orange);
+  color: var(--white);
+  font-weight: 700;
+  border-radius: 100px;
+  font-size: 0.5rem;
+  position: absolute;
+  top: -25%;
+  right: 0;
+  pointer-events: none;
 }
 
 .profile-image {
@@ -421,6 +440,7 @@ header {
   aspect-ratio: 4 / 3.2;
   object-fit: cover;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .thumbnails {
@@ -529,7 +549,8 @@ header {
   font-weight: 700;
 }
 
-.add-to-cart {
+.add-to-cart,
+.checkout {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -544,4 +565,77 @@ header {
 .add-to-cart span {
   display: grid;
   place-items: center;
+}
+
+.cart-dialog {
+  min-width: calc(100% - 2rem);
+  aspect-ratio: 2 / 1.5;
+  margin-inline: auto;
+  position: absolute;
+  top: 90px;
+  right: 1rem;
+  background-color: var(--surface2);
+  border-radius: 10px;
+  z-index: 10;
+  display: none;
+}
+.cart-dialog.show {
+  display: block;
+}
+
+.cart-header {
+  /* border: 1px solid red; */
+  border-bottom: 0.5px solid var(--surface4);
+}
+
+.cart-title {
+  font-size: 1.2rem;
+  color: var(--text2);
+  padding: 1rem 1.5rem;
+}
+
+.cart-body {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.added-items {
+  display: grid;
+  gap: 1rem;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.item > * {
+  /* outline: 1px solid green; */
+}
+
+.item-thumbnail {
+  width: 3rem;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.item-details > * {
+  color: var(--text2);
+}
+.item-details > p {
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item-total {
+  font-weight: 700;
+}
+.item-del,
+.cart {
+  border: 0;
+  background: none;
 }
