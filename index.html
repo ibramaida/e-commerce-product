@@ -23,7 +23,7 @@
 
     
   <body>
-    <header>
+    <header class="main-header">
       <div class="hamburger">
         <img src="./images/icon-menu.svg" alt="">
       </div>
@@ -40,11 +40,34 @@
         </ul>
       </nav>
       <div class="profile">
-        <div class="cart">
+        <button class="cart">
           <img src="./images/icon-cart.svg" alt="cart">
-        </div>
+          <span class="cart-items-count">3</span>
+        </button>
         <div class="profile-image">
           <img src="./images/image-avatar.png" alt="avatar">
+        </div>
+      </div>
+      <div class="cart-dialog">
+        <header class="cart-header">
+          <h2 class="cart-title">Cart</h2>
+        </header>
+        <div class="cart-body">
+          <div class="added-items">
+            <div class="item">
+              <div class="item-thumbnail">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="produact1">
+              </div>
+              <div class="item-details">
+                <p class="item-title">Fall Limited Edition Sneakers</p>
+                <span class="item-price">$125.00</span> x <span class="item-count">3</span> <span class="item-total">$375.00</span>
+              </div>
+              <button class="item-del">
+                <img src="./images/icon-delete.svg" alt="">
+              </button>
+            </div>
+          </div>
+          <button class="checkout">Checkout</button>
         </div>
       </div>
     </header>
@@ -53,10 +76,9 @@
         <div class="product-image">
           <div class="carousel">
             <img src="./images/image-product-1.jpg" alt="product 1">
-            <img src="./images/image-product-2.jpg" alt="product 1">
-            <img src="./images/image-product-3.jpg" alt="product 1">
-            <img src="./images/image-product-4.jpg" alt="product 1">
-            
+            <img src="./images/image-product-2.jpg" alt="product 2">
+            <img src="./images/image-product-3.jpg" alt="product 3">
+            <img src="./images/image-product-4.jpg" alt="product 4">
           </div>
           <ul class="thumbnails">
              <li><img src="./images/image-product-1-thumbnail.jpg" alt=""></li>
@@ -117,5 +139,6 @@
     </div> -->
 
     <script src="./carousel.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
