@@ -26,5 +26,5 @@ previous.addEventListener("click", (e) => {
 });
 
 let width = carousel.offsetWidth;
-console.log(width);
+// console.log(width);
 window.addEventListener("resize", (e) => (width = carousel.offsetWidth));

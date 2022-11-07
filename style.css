@@ -657,10 +657,6 @@ select {
   gap: 1rem;
 }
 
-.item > * {
-  /* outline: 1px solid green; */
-}
-
 .item-thumbnail {
   width: 3rem;
   border-radius: 4px;
