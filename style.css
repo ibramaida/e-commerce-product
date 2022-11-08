@@ -578,6 +578,14 @@ select {
 
 :where(.decrease, .increase) {
   padding: 0.5rem;
+  background: none;
+  border: 0;
+  aspect-ratio: 1;
+  transition: outline-offset 250ms ease;
+}
+:where(.decrease, .increase):active {
+  outline: 1px solid var(--brand);
+  outline-offset: 2px;
 }
 
 .counter {
@@ -605,6 +613,10 @@ select {
   background-color: var(--orange);
   border-radius: 8px;
   color: var(--white);
+}
+
+:where(.add-to-cart, .checkout):active {
+  opacity: 0.5;
 }
 
 .add-to-cart span {
